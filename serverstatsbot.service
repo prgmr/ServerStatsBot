@@ -1,0 +1,13 @@
+[Unit]
+Description=ServerStatsBot
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /home/dmitry/ServerStatsBot/servstatsbot.py
+User=dmitry
+WorkingDirectory=/home/dmitry/ServerStatsBot/
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
